@@ -30,3 +30,9 @@ https://dribbble.com/shots/2935516-Job-search/attachments/609506
 * Implementation speed
 * Data structure designed
 * Functionality and how well it works.
+
+## Database Information
+
+In order to complete this project, I have chose to use 
+* [Github's Jobs API](https://jobs.github.com/api) for a list of jobs
+* [JSON-server](https://www.npmjs.com/package/json-server) for any possible CRUD functionality (if needed)
