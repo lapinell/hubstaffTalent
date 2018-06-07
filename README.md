@@ -31,8 +31,20 @@ https://dribbble.com/shots/2935516-Job-search/attachments/609506
 * Data structure designed
 * Functionality and how well it works.
 
-## Database Information
+## Tools
 
-In order to complete this project, I have chose to use 
+### Database
+In order to complete this project, I have chosen to use:
 * [Github's Jobs API](https://jobs.github.com/api) for a list of jobs
 * [JSON-server](https://www.npmjs.com/package/json-server) for any possible CRUD functionality (if needed)
+
+__Note:__ I chose not to build in NodeJS because, at the moment, I do not know NodeJS - though am excited to learn this after I graduate.
+
+### User Interface
+For the user interface, I have chosen to use:
+* [ReactJS]() as my framework
+* [Ant.Design]() as my component library
+* [SCSS]() as my css framework and compiler
+
+__Note:__ Ant.Design is a new component library to me. Before I was using Bootstrap and Reactstrap as my component libraries.
+
