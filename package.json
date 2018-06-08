@@ -1,0 +1,30 @@
+{
+  "name": "hubstafftalent",
+  "version": "1.0.0",
+  "description": "This is a hiring assessment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lapinell/hubstaffTalent.git"
+  },
+  "keywords": [
+    "reactjs"
+  ],
+  "author": "Laura Pinell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lapinell/hubstaffTalent/issues"
+  },
+  "homepage": "https://github.com/lapinell/hubstaffTalent#readme",
+  "dependencies": {
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0"
+  },
+  "devDependencies": {
+    "react-styleguidist": "^7.0.17",
+    "webpack": "^4.11.1"
+  }
+}
