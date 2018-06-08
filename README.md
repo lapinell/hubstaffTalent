@@ -46,5 +46,16 @@ For the user interface, I have chosen to use:
 * [Ant.Design]() as my component library
 * [SCSS]() as my css framework and compiler
 
-_Note:_ Ant.Design is a new component library to me. Before I was using Bootstrap and Reactstrap as my component libraries.
+_Note:_ Ant.Design is a new component library to me. Before I was using Bootstrap and Reactstrap as my component libraries. I also have not used SCSS with React before.
 
+## Project Plan
+
+Project Calendar
+
+| Thursday | Friday | Saturday | Sunday | Monday | Tuesday | Wednesday |
+| :------: | :----: | :------: | :----: | :----: | :-----: | :-------: |
+| Project Plan | Get from API | Style components | Review assignment |
+| Github Setup | Breakdown design | Integrate API | Turn in completed assignement |
+| Install DB | Design architecture | Implement Components |
+| Setup React | Create components | 
+| Install Styleguidist |
