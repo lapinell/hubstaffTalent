@@ -59,3 +59,88 @@ Project Calendar
 | Install DB | Design architecture | Implement Components |
 | Setup React | Create components | 
 | Install Styleguidist |
+
+## Component Architecture Design
+
+This is based off of the [Thinking In React](https://reactjs.org/docs/thinking-in-react.html) article in the [React Documentation](https://reactjs.org/docs).
+
+### Component Heirarchy
+
+* Search Page
+    * NavBar
+        * MenuItems
+    * SearchContent
+        * SearchBar
+        * FilterSidebar
+            * FilterCategory
+            * Tags
+            * Checkboxes
+            * InfoIcon
+        * Results
+            * ResultsHeader
+            * ResultsFooter
+            * SingleResult
+                * ResultTags
+        * FeaturedSidebar
+            * FeaturedSection
+                * FeaturedJob
+    * Footer
+        * FooterColumn
+
+### Identifying The Minimal (but complete) Represenation of UI State
+
+**All the pieces are:**
+*   The original list of jobs
+*   The search text the user has entered
+*   The value of the filters
+*   The filtered list of jobs
+*   The featured job lists
+
+**Which one's have state?**
+1. Original list of jobs:
+    1. Is it passed in from a parent via props? Yes.
+    1. Does it remain unchanged over time? No.
+    1. Can you compute it based on any other state or props in your component? Yes.
+    2. **No state**
+2. The search text the user has entered:
+    1. No
+    2. No
+    3. No
+    4.  **Has State**
+3.  The value of the filters
+    1.  No
+    2.  No
+    3.  No
+    4.  **Has state**
+4.  The filtered list of jobs:
+    1.  No
+    2.  No
+    3.  Yes
+    4.  **No state**
+5.  The featured job lists
+    1.  No.
+    2.  No.
+    3.  Yes.
+    4.  **No state**
+
+Components with state:
+* Search bar
+* Filters
+
+### Identifying where the state should live
+
+* The ``SearchContent`` needs to filter the job list based on state, ``SearchBar`` needs to display the search text and the filters in ``FilterSidebar`` needs to display the filtered state.
+* The common owner component is ``SearchContent``
+
+### Component Architecture Layour
+_Note: This deviates from the Think In React article._
+
+* App.js (aka Search Page since this is the only page I'm building)
+    * NavBar
+    * SearchContent (state lives here)
+        * SearchBar (has state)
+        * FilterSidebar (has state)
+        * Results
+        * FeaturedSidebar
+    * Footer
+
