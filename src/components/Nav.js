@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './Nav.scss';
 
 export default class Test extends React.Component {
     render() {
