@@ -1,0 +1,1 @@
+export default const APIpath = "https://jobs.github.com/positions.json";
