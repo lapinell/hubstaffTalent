@@ -1,26 +1,38 @@
 import React from 'react';
-import { Menu, Submenu } from 'antd';
+import {Row, Col, Menu} from 'antd';
+import 'antd/dist/antd.css';
+
 
 let Nav = () => {
         return (
-            <Menu>
-                <Menu.Item>Hot it works</Menu.Item>
-                <Submenu title="Browse">
+            <Menu mode="horizontal">
+                <Menu.Item>How It Works</Menu.Item>
+                <Menu.SubMenu title="Browse">
                     <Menu.Item>Submenu Item</Menu.Item>
-                </Submenu>
+                </Menu.SubMenu>
                 <Menu.Item>Search</Menu.Item>
                 <Menu.Item>My Account</Menu.Item>
             </Menu>
         );
 };
 
-let Logo = "Hubstaff Talent";
+let Logo = () => {
+    return (
+            <p>Hubstaff Talent</p>
+    )
+};
 
 let NavBar = () => {
     return (
-    <div>
-        <Logo />
-        <Nav />
-    </div>
+    <Row>
+        <Col span={4} pull={18}>
+            <Logo />
+        </Col>
+        <Col span={16} push={4}>
+            <Nav />
+        </Col>
+    </Row>
     );
 };
+
+export default NavBar;
