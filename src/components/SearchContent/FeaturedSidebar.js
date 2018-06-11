@@ -1,12 +1,15 @@
 import React from 'react';
 import 'antd/dist/antd.css';
 import { Col, Button } from 'antd';
+import FeaturedSection from './FeaturedSidebar/FeaturedSection';
 
 let FeaturedSidebar = () => {
 
     return (
         <Col id="featuredSidebar">
             <CallToAction />
+            <FeaturedSection title="Top Jobs" id="featured-topJobs" jobs="some array" />
+            <FeaturedSection title="Most Viewed This Week" id="featured-mostViewed" jobs="some array" />
         </Col>
     );
 
