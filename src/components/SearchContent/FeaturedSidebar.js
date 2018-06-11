@@ -6,7 +6,7 @@ import FeaturedSection from './FeaturedSidebar/FeaturedSection';
 let FeaturedSidebar = () => {
 
     return (
-        <Col id="featuredSidebar">
+        <Col span={6} id="featuredSidebar">
             <CallToAction />
             <FeaturedSection title="Top Jobs" id="featured-topJobs" jobs="some array" />
             <FeaturedSection title="Most Viewed This Week" id="featured-mostViewed" jobs="some array" />

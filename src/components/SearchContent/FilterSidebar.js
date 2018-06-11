@@ -7,7 +7,7 @@ class FilterSidebar extends React.Component {
 
     render() {
         return (
-            <Col id="filterSidebar">
+            <Col span={6} id="filterSidebar">
                 <div id="filterSidebar-header">
                     <h2>Filters</h2>
                     <p id="clearAllFilters"><a href="#">Clear all filters</a></p>
