@@ -8,9 +8,9 @@ class FilterSidebar extends React.Component {
     render() {
         return (
             <Col id="filterSidebar">
-                <div id="filter-header">
+                <div id="filterSidebar-header">
                     <h2>Filters</h2>
-                    <p id="clearFilters"><a href="#">Clear all filters</a></p>
+                    <p id="clearAllFilters"><a href="#">Clear all filters</a></p>
                 </div>
                 <FilterCategory id="filter-skills" title="Skills" filters="keyword tags" />
                 <FilterCategory id="filter-availability" title="Availability" filters="checkboxes" />

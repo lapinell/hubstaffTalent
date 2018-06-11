@@ -6,8 +6,8 @@ export default class SearchContent extends React.Component {
     render() {
         return (
             <div id="SearchContent">
-                <FilterSidebar />
                 <SearchBar />
+                <FilterSidebar />
             </div>
         )
     }
