@@ -1,3 +1,13 @@
+#navBar {
+    display: flex;
+    align-items: flex-end;
+}
+
+ul#nav-top {
+    display: flex;
+    justify-content: flex-end;
+}
 img#logo-top {
-    max-width: 100%;
+    max-width: 150px;
+    width: 100%;
 };

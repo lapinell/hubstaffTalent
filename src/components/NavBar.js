@@ -7,7 +7,7 @@ import LogoImg from '../images/hubstaff_logo.png';
 
 let Nav = () => {
         return (
-            <Menu mode="horizontal">
+            <Menu id="nav-top" mode="horizontal">
                 <Menu.Item>How It Works</Menu.Item>
                 <Menu.SubMenu title="Browse">
                     <Menu.Item>Submenu Item</Menu.Item>
@@ -26,11 +26,11 @@ let Logo = () => {
 
 let NavBar = () => {
     return (
-    <Row>
+    <Row id="navBar">
         <Col span={4}>
             <Logo />
         </Col>
-        <Col span={16}> 
+        <Col span={16} offset={4}> 
             <Nav />
         </Col>
     </Row>
