@@ -1,15 +1,16 @@
 import React from 'react';
 import { Row } from 'antd';
 import FooterCol from './Footer/FooterColumn';
+import './Footer.css';
 
 let Footer = () => {
     return (
-        <Row type="flex" justify="center">
-            <FooterCol title="Logo" />
-            <FooterCol title="Talent" links={testList}/>
-            <FooterCol title="HubStaff" links={testList}/>
-            <FooterCol title="Support" links={testList}/>
-            <FooterCol title="Social" links={testList}/>
+        <Row id="hs-footer" type="flex" justify="center">
+            <FooterCol id="footer-logo" title="Logo" />
+            <FooterCol id="footer-talent" title="Talent" links={testList}/>
+            <FooterCol id="footer-hubstaff" title="HubStaff" links={testList}/>
+            <FooterCol id="footer-support" title="Support" links={testList}/>
+            <FooterCol id="footer-social" title="Social" links={testList}/>
         </Row>
     )
 }

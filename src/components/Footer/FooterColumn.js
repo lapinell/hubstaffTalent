@@ -1,5 +1,8 @@
 import React from 'react';
 import { Col } from 'antd';
+import './FooterColumn.css';
+
+//this function creates it so that one can populate a different array of links for each footer column link set
 
 let FooterCol = (props) => {
     if (props.links) {
@@ -12,7 +15,9 @@ let FooterCol = (props) => {
         return (
             <Col span={4}>
                 <h3>{props.title}</h3>
-                {uList}
+                <ul id={props.id}>
+                    {uList}
+                </ul>
             </Col>
         );
     }   else {
