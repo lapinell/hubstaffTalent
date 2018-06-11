@@ -1,6 +1,8 @@
 import React from 'react';
 import {Row, Col, Menu} from 'antd';
 import 'antd/dist/antd.css';
+import './NavBar.css';
+import LogoImg from '../images/hubstaff_logo.png';
 
 
 let Nav = () => {
@@ -18,17 +20,17 @@ let Nav = () => {
 
 let Logo = () => {
     return (
-            <p>Hubstaff Talent</p>
+            <img id="logo-top" src={LogoImg} alt="hubstaff talent logo" />
     )
 };
 
 let NavBar = () => {
     return (
     <Row>
-        <Col span={4} pull={18}>
+        <Col span={4}>
             <Logo />
         </Col>
-        <Col span={16} push={4}>
+        <Col span={16}> 
             <Nav />
         </Col>
     </Row>
