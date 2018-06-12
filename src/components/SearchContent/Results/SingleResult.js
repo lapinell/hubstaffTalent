@@ -21,6 +21,7 @@ export default class SingleResult extends React.Component {
                 <div class="jobTitle">
                     <p className="title">{this.props.title}</p>
                     <Badge className="badge-availability" count={this.props.availability} />
+                    <p className="payRate">{this.props.payRate}</p>
                 </div>
                 <div className="jobCompany">
                     <p className="company"><a href="#">{this.props.company}</a></p>

@@ -2,6 +2,7 @@ import React from 'react';
 import 'antd/dist/antd.css';
 import { Col, Button } from 'antd';
 import FeaturedSection from './FeaturedSidebar/FeaturedSection';
+import './FeaturedSidebar.css';
 
 let FeaturedSidebar = () => {
 
