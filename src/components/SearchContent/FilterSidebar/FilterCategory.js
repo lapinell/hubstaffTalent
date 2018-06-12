@@ -3,6 +3,9 @@ import 'antd/dist/antd.css';
 import './FilterCategory.css';
 
 let FilterCategory = (props) => { //has props of id, title and filterInput
+
+    console.log('filter prop is:', props.filters)
+
     return (
         <div className="filterCat" id={props.id}>
             <div className="filter-header">

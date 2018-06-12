@@ -1,6 +1,6 @@
 import React from 'react';
 import 'antd/dist/antd.css';
-import { Col, Input, Checkbox, Dropdown, Menu, Button, message, Icon, Tag, Tooltip } from 'antd';
+import { Col, Input, Checkbox, Dropdown, Menu, Button, message, Icon, Tag, Tooltip, Slider } from 'antd';
 // import ChipInput from 'material-ui-chip-input'
 import FilterCategory from './FilterSidebar/FilterCategory';
 import './FilterSidebar.css';
@@ -308,6 +308,31 @@ class LanguagesFilter extends React.Component {
     }
 }
 
+class PayFilter extends React.Component {
+
+    render() {
+
+    const marks = {
+        10: '$10',
+        150: '$150'
+        };
+
+    let onChange = (event) => {
+        console.log(`checked = ${event.target.checked}`);
+    };
+
+    let onAfterChange = (value) => {
+        console.log('onAfterChange: ', value);
+        };
+
+      return (
+        <div>
+          <Slider range min={10} max={150} marks={marks} defaultValue={[20, 50]} onAfterChange={onAfterChange} />
+          <Checkbox onChange={onChange}>Include profiles with payrates</Checkbox>
+        </div>
+      );
+    }
+  }
   class FilterSidebar extends React.Component {
 
     render() {
@@ -318,6 +343,7 @@ class LanguagesFilter extends React.Component {
         let filterSkills = <SkillsFilter />
         let filterCountries = <CountriesFilter />
         let filterLanguages = <LanguagesFilter />
+        let filterPayRate = <PayFilter />
 
         return (
             <Col span={6} id="filterSidebar">
@@ -329,7 +355,7 @@ class LanguagesFilter extends React.Component {
                 <FilterCategory id="filter-skills" title="Skills" filters={filterSkills} />
                 <FilterCategory id="filter-availability" title="Availability" filters={filterAvail} />
                 <FilterCategory id="filter-job" title="Job Type" filters={filterJobType} />
-                <FilterCategory id="filter-pay" title="Pay Rate" filters="range" />
+                <FilterCategory id="filter-pay" title="Pay Rate" filters={filterPayRate} />
                 <FilterCategory id="filter-experience" title="Experience Level" filters={filterExperience} />
                 <FilterCategory id="filter-countries" title="Countries" filters={filterCountries} />
                 <FilterCategory id="filter-languages" title="Languages" filters={filterLanguages} />
