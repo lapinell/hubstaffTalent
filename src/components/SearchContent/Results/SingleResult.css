@@ -6,11 +6,19 @@
     margin-right: 10px;
 }
 
+.title {
+    font-weight: 500;
+}
+
 .company:before {
     /* image icon */
 }
 
 .location:before {
     /* image icon */
+}
+
+hr {
+    margin: 20px 0px;
 }
 

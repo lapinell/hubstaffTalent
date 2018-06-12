@@ -17,6 +17,7 @@ export default class SingleResult extends React.Component {
 
         return (
             <div className="jobResult">
+                <hr />
                 <div class="jobTitle">
                     <p className="title">{this.props.title}</p>
                     <Badge className="badge-availability" count={this.props.availability} />
