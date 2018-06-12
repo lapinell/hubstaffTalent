@@ -10,7 +10,7 @@ export default class SearchContent extends React.Component {
         return (
             <div id="SearchContent">
                 <SearchBar />
-                <Row>
+                <Row gutter={16}>
                     <FilterSidebar />
                     <Results />
                     <FeaturedSidebar />
