@@ -1,6 +1,8 @@
 #navBar {
     display: flex;
     align-items: flex-end;
+    background: rgb(255, 255, 255);
+    padding: 0 5%;
 }
 
 ul#nav-top {

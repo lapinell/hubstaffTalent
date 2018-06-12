@@ -2,6 +2,7 @@ import React from 'react';
 import 'antd/dist/antd.css';
 import { Col } from 'antd';
 import FilterCategory from './FilterSidebar/FilterCategory';
+import './FilterSidebar.css';
 
 class FilterSidebar extends React.Component {
 
@@ -12,6 +13,7 @@ class FilterSidebar extends React.Component {
                     <h2>Filters</h2>
                     <p id="clearAllFilters"><a href="#">Clear all filters</a></p>
                 </div>
+                <hr />
                 <FilterCategory id="filter-skills" title="Skills" filters="keyword tags" />
                 <FilterCategory id="filter-availability" title="Availability" filters="checkboxes" />
                 <FilterCategory id="filter-job" title="Job Type" filters="dropdown" />

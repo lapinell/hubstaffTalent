@@ -1,7 +1,6 @@
 .App {
-  padding-left: 5%;
-  padding-right: 5%;
   font-family: 'Roboto', sans-serif !important; /* Overriding ant.design fonts */
+  background: rgb(245, 245, 245);
 }
 
 img { 
