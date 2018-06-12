@@ -1,6 +1,7 @@
 import React from 'react';
 import 'antd/dist/antd.css';
 import { Col, Menu, Dropdown, Button, Pagination } from 'antd';
+import SingleResult from './Results/SingleResult';
 
 let SortByMenu = (
     <Menu>
@@ -18,6 +19,10 @@ let SortByMenu = (
 
 let ResultsHeader = (props) => {
     
+    let tagBadges = ['ux', 'ui', 'android', 'javascript', 'sketch'];
+
+        console.log('tagBadges is:', tagBadges);
+    
     return (
         <div id="results-header" >
             <h2>Results {props.number}</h2>
@@ -25,6 +30,7 @@ let ResultsHeader = (props) => {
                 <Button>Sort by</Button>
             </Dropdown>
         </div>
+
     )
 
 }
@@ -40,10 +46,11 @@ let ResultsFooter = (props) => {
 }
 
 let Results = () => {
-
+    let tagBadges = ['ux', 'ui', 'android', 'javascript', 'sketch'];
     return (
         <Col span={12} id="results">
             <ResultsHeader />
+            <SingleResult title="Job Title" availability="full-time" company="Epic Coders" location="Indianaplis, IN" replyRate="82%" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum." skills={tagBadges}/>
             <ResultsFooter />
         </Col>
     )
