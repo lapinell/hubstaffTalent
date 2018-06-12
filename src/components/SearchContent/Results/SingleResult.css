@@ -1,0 +1,16 @@
+.jobTitle, .jobCompany {
+    display: flex;
+}
+
+.title, .badge-skill, .company {
+    margin-right: 10px;
+}
+
+.company:before {
+    /* image icon */
+}
+
+.location:before {
+    /* image icon */
+}
+
