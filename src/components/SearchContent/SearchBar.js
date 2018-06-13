@@ -9,7 +9,7 @@ class SearchBar extends React.Component {
     render() {
         return (
              <Row id="searchBar">
-                <Col span={16} offset={4}>
+                <Col span={24}>
                     <Search id="searchBox"
                     placeholder="input search text"
                     enterButton="Search"
