@@ -98,10 +98,10 @@ let AvailabilityFilter = () => {
 
 let JobTypeFilter = () => {
 
-    function handleButtonClick(e) {
-        message.info('Click on left button.');
-        console.log('click left button', e);
-      }
+    // function handleButtonClick(e) {
+    //     message.info('Click on left button.');
+    //     console.log('click left button', e);
+    //   }
 
     function handleMenuClick(e) {
         message.info('Click on menu item.');
@@ -128,10 +128,10 @@ let JobTypeFilter = () => {
 
 let ExperienceFilter = () => {
 
-    function handleButtonClick(e) {
-        message.info('Click on left button.');
-        console.log('click left button', e);
-      }
+    // function handleButtonClick(e) {
+    //     message.info('Click on left button.');
+    //     console.log('click left button', e);
+    //   }
 
     function handleMenuClick(e) {
         message.info('Click on menu item.');
@@ -349,7 +349,7 @@ class PayFilter extends React.Component {
             <Col span={6} id="filterSidebar">
                 <div id="filterSidebar-header">
                     <h2>Filters</h2>
-                    <p id="clearAllFilters"><a href="#">Clear all filters</a></p>
+                    <p id="clearAllFilters"><a href="/">Clear all filters</a></p>
                 </div>
                 <hr />
                 <FilterCategory id="filter-skills" title="Skills" filters={filterSkills} />

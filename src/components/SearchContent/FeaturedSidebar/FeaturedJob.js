@@ -5,7 +5,7 @@ import './FeaturedJob.css';
 let FeaturedJob = (props) => {
     return (
         <div className="featuredJobResult">
-            <div class="featuredJobTitle">
+            <div className="featuredJobTitle">
                 <p className="featuredTitle">{props.title}</p>
                 <p className="featuredPayRate">{props.payRate}</p>
             </div>
