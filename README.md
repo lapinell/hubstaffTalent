@@ -31,6 +31,14 @@ https://dribbble.com/shots/2935516-Job-search/attachments/609506
 * Data structure designed
 * Functionality and how well it works.
 
+## Instalation Instructions
+
+1. Clone/Fork the repo
+2. Install using
+```
+    npm install
+```
+
 ## Tools
 
 ### Database
@@ -143,4 +151,15 @@ _Note: This deviates from the Think In React article._
         * Results
         * FeaturedSidebar
     * Footer
+
+##Next steps 
+
+To complete minimum project goals:
+* create functionality for Search Bar so that it filters results based on the query passed through my Search api-call function (see API-interactions/api-calls.js)
+* create functinoality for each filter in the Filters Sidebar so that it filters results based on the query passed through the appropriate api-call function  (see API-interactions/api-calls.js)
+
+##Further Steps:
+* create an account page where user can save/fave jobs as well as delete saved jobs
+    * also be able to set preferences for jobs
+* create a job details page that dynamically populates each jobs information
 
