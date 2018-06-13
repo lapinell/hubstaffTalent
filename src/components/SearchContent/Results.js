@@ -20,10 +20,6 @@ let SortByMenu = (
 
 let ResultsHeader = (props) => {
     
-    let tagBadges = ['ux', 'ui', 'android', 'javascript', 'sketch'];
-
-        console.log('tagBadges is:', tagBadges);
-    
     return (
         <div id="results-header" >
             <h2>Results {props.number}</h2>
@@ -46,17 +42,24 @@ let ResultsFooter = (props) => {
 
 }
 
-let Results = () => {
+let Results = (props) => {
+
+    let jobsArray = props.jobs;
+
+    console.log('Results component jobs prop:', jobsArray);
+
     let tagBadges = ['ux', 'ui', 'android', 'javascript', 'sketch'];
+
+    let jobResults = jobsArray.map((obj) => {
+        <SingleResult title={obj.title} availability={obj.availability} company={obj.company}location={obj.location} replyRate={obj.replyRate} description={obj.description} skills={obj.skills}/>
+    })
+
+    console.log('Job Results List', jobResults);
+
     return (
         <Col span={12} id="results-container">
             <div id="results">
                 <ResultsHeader />
-                <SingleResult title="Job Title" availability="full-time" company="Epic Coders" location="Indianaplis, IN" replyRate="82%" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum." skills={tagBadges}/>
-                <SingleResult title="Job Title" availability="full-time" company="Epic Coders" location="Indianaplis, IN" replyRate="82%" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum." skills={tagBadges}/>
-                <SingleResult title="Job Title" availability="full-time" company="Epic Coders" location="Indianaplis, IN" replyRate="82%" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum." skills={tagBadges}/>
-                <SingleResult title="Job Title" availability="full-time" company="Epic Coders" location="Indianaplis, IN" replyRate="82%" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum." skills={tagBadges}/>
-                <SingleResult title="Job Title" availability="full-time" company="Epic Coders" location="Indianaplis, IN" replyRate="82%" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum." skills={tagBadges}/>
             </div>
             <ResultsFooter />
         </Col>
