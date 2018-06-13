@@ -24,7 +24,7 @@ let CallToAction = () => {
             <h2>Track time on Hubstaff</h2>
             <p>Pay only for the hours worked</p>
             <Button type="primary">Sign Up</Button>
-            <p><a href="#">Learn more.</a></p>
+            <p><a href="/">Learn more.</a></p>
         </div>
     );
 

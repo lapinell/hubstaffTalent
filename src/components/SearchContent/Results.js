@@ -20,10 +20,6 @@ let SortByMenu = (
 
 let ResultsHeader = (props) => {
     
-    let tagBadges = ['ux', 'ui', 'android', 'javascript', 'sketch'];
-
-        console.log('tagBadges is:', tagBadges);
-    
     return (
         <div id="results-header" >
             <h2>Results {props.number}</h2>
@@ -46,17 +42,36 @@ let ResultsFooter = (props) => {
 
 }
 
-let Results = () => {
-    let tagBadges = ['ux', 'ui', 'android', 'javascript', 'sketch'];
+let ResultsList = (props) => { //compiles the jobs results array into single result components
+    const resultsArray = props.jobList;
+
+    const skillsList = ["ui", "ux", "reactjs", "html5", "antdesign", "bootstrap", "firebase", "API integration"];
+
+    
+    const results = resultsArray.map((job, index) => {
+        
+        // This is how I would parse the HTML description had it been short paragraph instead of a full description
+        // let HTMLdescription = job.description;
+        // var nonHTMLdescription = HTMLdescription.replace(/<p>|<\/p>/ig, '') 
+        
+        return (
+        <SingleResult key={index} jobKey={job.id} title={job.title} availability={job.type} payRate="$55/hr" description="This is a short description of the role that will make you interested in clicking through and seeing the full description." company={job.company} location={job.location} replyRate="88%" skills={skillsList} />
+        );
+    });
+
+    return results;
+}
+
+let Results = (props) => {
+
+    let jobsArray = props.jobs; //in comes the data
+    console.log('jobsArray:', jobsArray.data);
+
     return (
         <Col span={12} id="results-container">
             <div id="results">
                 <ResultsHeader />
-                <SingleResult title="Job Title" availability="full-time" company="Epic Coders" location="Indianaplis, IN" replyRate="82%" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum." skills={tagBadges}/>
-                <SingleResult title="Job Title" availability="full-time" company="Epic Coders" location="Indianaplis, IN" replyRate="82%" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum." skills={tagBadges}/>
-                <SingleResult title="Job Title" availability="full-time" company="Epic Coders" location="Indianaplis, IN" replyRate="82%" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum." skills={tagBadges}/>
-                <SingleResult title="Job Title" availability="full-time" company="Epic Coders" location="Indianaplis, IN" replyRate="82%" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum." skills={tagBadges}/>
-                <SingleResult title="Job Title" availability="full-time" company="Epic Coders" location="Indianaplis, IN" replyRate="82%" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum." skills={tagBadges}/>
+                <ResultsList jobList={jobsArray.data} />
             </div>
             <ResultsFooter />
         </Col>
