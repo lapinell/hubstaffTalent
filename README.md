@@ -1,5 +1,7 @@
 # Hubstaff Talent
 
+Preface: The hiring assessment was completed on the master branch. I am currently working on a branch called master2 in order to complete my capstone requirements. (That is, I am using this assessment to also complete my capstone but I have to add a few more things to it that weren't required and wouldn't have been completed within the original assessment timeframe.)
+
 This project is a hiring assessment from RiskSense HR. The time give to complete the project is one week, and the average completion time is 10 hours.
 
 **Skills being assessed are:**
@@ -162,4 +164,6 @@ To complete minimum project goals:
 * create an account page where user can save/fave jobs as well as delete saved jobs
     * also be able to set preferences for jobs
 * create a job details page that dynamically populates each jobs information
+
+
 
