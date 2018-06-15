@@ -154,6 +154,28 @@ _Note: This deviates from the Think In React article._
         * FeaturedSidebar
     * Footer
 
+## Planning Out the Functionality
+
+***Search Function***
+
+**The goal:** The search function will call the api to use it's search query and use the user input to find a list of matching jobs. If there are no matching jobs, an alert will be printed stating the search term did not yield any results.
+
+1. User inputs a term
+2. User presses the search button (stretch: or hits enter)
+3. On-click, a function will grab the value of the user input field, plug it into the search api-calls function
+4. After the api resolves with results, the state of the app will then be updated with setState
+5. And the search results will then be displayed.
+
+**Filter Function**
+
+**The goal:** The filters will call the api to use it's search query calls and use the input values to find a list of matching jobs. If there are no matching jobs, an alert will be printed stating so.
+
+1. User selects desired inputs
+2. User presses Filter button (doesn't exist yet)
+3. On click, a function will grab the values of the filters, plug it into the appropriate api-calls function
+4. After the api resolves the results, if any, the state of the app wil be updated with setState
+5. And the new results will then be displayed
+
 ##Next steps 
 
 To complete minimum project goals:
@@ -164,6 +186,3 @@ To complete minimum project goals:
 * create an account page where user can save/fave jobs as well as delete saved jobs
     * also be able to set preferences for jobs
 * create a job details page that dynamically populates each jobs information
-
-
-
