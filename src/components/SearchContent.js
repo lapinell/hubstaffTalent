@@ -6,6 +6,7 @@ import FeaturedSidebar from './SearchContent/FeaturedSidebar';
 import Results from './SearchContent/Results';
 import './SearchContent.css';
 import { apiGETall } from '../API-interactions/api-path';
+import { Search } from '../API-interactions/api-calls';
 
 
 
@@ -17,18 +18,29 @@ export default class SearchContent extends React.Component {
 
         this.state = { //assigns the initial state which will be the unfiltered results
           results: undefined
-        }
+        };
+
+        apiGETall()
+        .then((data) => {
+            // console.log('the data is:', data);
+            this.setState({
+                results: data
+            });
+        });
 
     };
 
-   componentDidMount() {
-    apiGETall()
-    .then((data) => {
-        // console.log('the data is:', data);
-        this.setState({
-            results: data
-        });
-    });
+//    componentDidMount() { //This might be where the mistake is, LP
+    
+//    }
+
+   searchJobs(term) {
+       Search(term)
+       .then((data) => {
+           this.setState({
+               results: data
+           });
+       });
    }
 
     render() {
@@ -51,7 +63,7 @@ export default class SearchContent extends React.Component {
 
         return (
             <div id="SearchContent">
-                <SearchBar />
+                <SearchBar onSearchChange={term => this.searchJobs(term)} />
                 <Row gutter={16}>
                     <FilterSidebar />
                     <LoadResults />
