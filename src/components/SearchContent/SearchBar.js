@@ -6,6 +6,14 @@ import './SearchBar.css';
 const Search = Input.Search;
 
 class SearchBar extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            term: ''
+        };
+    }
+
     render() {
         return (
              <Row id="searchBar">
@@ -14,11 +22,20 @@ class SearchBar extends React.Component {
                     placeholder="input search text"
                     enterButton="Search"
                     size="large"
-                    onSearch={value => console.log(value)}
+                    onSearch={(value) => {
+                        console.log(value);
+                        this.onInputChange(value);
+                        }
+                    }
                     />
                 </Col>
             </Row>
         )}
+
+        onInputChange(term) {
+            this.setState({term});
+            this.props.onSearchChange(term);
+        }
 };
 
 export default SearchBar;
