@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col } from 'antd';
+import { Row, Col, Spin } from 'antd';
 import  SearchBar from './SearchContent/SearchBar';
 import FilterSidebar from './SearchContent/FilterSidebar';
 import FeaturedSidebar from './SearchContent/FeaturedSidebar';
@@ -30,10 +30,6 @@ export default class SearchContent extends React.Component {
 
     };
 
-//    componentDidMount() { //This might be where the mistake is, LP
-    
-//    }
-
    searchJobs(term) {
        Search(term)
        .then((data) => {
@@ -52,7 +48,7 @@ export default class SearchContent extends React.Component {
                 return (
                 <Col span={12} id="results-container">
                     <div id="results">
-                        <h1>Loading...</h1>
+                         <Spin className="spinner" size="large" />
                     </div>
                  </Col>
                 )
@@ -63,8 +59,8 @@ export default class SearchContent extends React.Component {
 
         return (
             <div id="SearchContent">
+                <Row>
                 <SearchBar onSearchChange={term => this.searchJobs(term)} />
-                <Row gutter={16}>
                     <FilterSidebar />
                     <LoadResults />
                     <FeaturedSidebar />

@@ -1,49 +1,5 @@
 {
-    "jobs" : [
-        {
-            "job title": "Senior PHP Developer",
-            "company" : "Epic Coders",
-            "location" : "Indianapolis, IN",
-            "replyRate" : 82,
-            "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, culputate eu pharetra nec, mattis ac neque.",
-            "tags" : [
-                "UI",
-                "UX",
-                "andriod",
-                "javascript",
-                "sketch"
-            ],
-            "wage" : 44.00
-        },
-        {
-            "job title": "Senior Front End Developer",
-            "company" : "Smart Coders",
-            "location" : "Anapolis, MI",
-            "replyRate" : 86,
-            "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, culputate eu pharetra nec, mattis ac neque.",
-            "tags" : [
-                "UI",
-                "UX",
-                "ADA",
-                "javascript",
-                "sketch"
-            ],
-            "wage" : 40.00
-        },
-        {
-            "job title": "Junior Front End Developer",
-            "company" : "Global Devs",
-            "location" : "Nashville, TN",
-            "replyRate" : 95,
-            "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, culputate eu pharetra nec, mattis ac neque.",
-            "tags" : [
-                "UI",
-                "UX",
-                "ReactJS",
-                "javascript",
-                "Firebase"
-            ],
-            "wage" : 35.00
-        }
+    "savedJobs" : [
+        
     ]
   }

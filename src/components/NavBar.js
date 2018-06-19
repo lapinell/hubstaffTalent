@@ -2,7 +2,7 @@ import React from 'react';
 import {Row, Col, Menu} from 'antd';
 import 'antd/dist/antd.css';
 import './NavBar.css';
-import LogoImg from '../images/hubstaff_logo.png';
+import LogoImg from '../images/nss-logo-compact.png';
 
 
 let Nav = () => {
