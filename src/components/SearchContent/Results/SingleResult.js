@@ -1,9 +1,39 @@
 import React from 'react';
 import 'antd/dist/antd.css';
-import { Badge } from 'antd';
+import { Badge, Icon } from 'antd';
 import './SingleResult.css';
+import { postFave, deleteFave } from '../../../json-interactions/json-calls';
 
 export default class SingleResult extends React.Component {
+    state = {
+        selected: false,
+        type: "star-o",
+        id: undefined
+    };
+
+    SaveFave = () => {
+
+        let jobKey = this.props.jobKey;
+
+        if (this.state.selected) {
+            console.log('unfavoriting job id', jobKey);
+            this.setState({
+                selected: false,
+                type: "star-o"
+            });
+            deleteFave(this.state.id);
+        } else {
+            console.log('favoriting job', jobKey);
+            this.setState({
+                selected: true,
+                type: "star"
+            });
+            postFave(jobKey)
+            .then((id) => {
+                this.setState({id});
+            });
+    };
+};
 
     render() {
 
@@ -15,10 +45,13 @@ export default class SingleResult extends React.Component {
 
         });
 
+
+
         return (
             <div key={this.props.jobKey} className="jobResult">
                 <hr />
-                <div className="jobTitle">
+                <div id={this.state.id} className="jobTitle">
+                    <a onClick={this.SaveFave}><Icon type={this.state.type} /></a>
                     <p className="title">{this.props.title}</p>
                     <Badge className="badge-availability" count={this.props.availability} />
                     <p className="payRate">{this.props.payRate}</p>

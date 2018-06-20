@@ -1,6 +1,6 @@
 import React from 'react';
 import 'antd/dist/antd.css';
-import { Col, Button } from 'antd';
+import { Col, Button, Icon } from 'antd';
 import FeaturedSection from './FeaturedSidebar/FeaturedSection';
 import './FeaturedSidebar.css';
 
@@ -20,7 +20,7 @@ let CallToAction = () => {
     
     return (
         <div id="c2a-signup" className="callToAction">
-            <img src="#" alt="icon depicting connection" />
+            <Icon type="api" style={{fontSize: 72, color: '#08c'}}/>
             <h2>Track time on Hubstaff</h2>
             <p>Pay only for the hours worked</p>
             <Button type="primary">Sign Up</Button>

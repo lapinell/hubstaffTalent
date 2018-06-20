@@ -1,49 +1,28 @@
 {
-    "jobs" : [
-        {
-            "job title": "Senior PHP Developer",
-            "company" : "Epic Coders",
-            "location" : "Indianapolis, IN",
-            "replyRate" : 82,
-            "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, culputate eu pharetra nec, mattis ac neque.",
-            "tags" : [
-                "UI",
-                "UX",
-                "andriod",
-                "javascript",
-                "sketch"
-            ],
-            "wage" : 44.00
-        },
-        {
-            "job title": "Senior Front End Developer",
-            "company" : "Smart Coders",
-            "location" : "Anapolis, MI",
-            "replyRate" : 86,
-            "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, culputate eu pharetra nec, mattis ac neque.",
-            "tags" : [
-                "UI",
-                "UX",
-                "ADA",
-                "javascript",
-                "sketch"
-            ],
-            "wage" : 40.00
-        },
-        {
-            "job title": "Junior Front End Developer",
-            "company" : "Global Devs",
-            "location" : "Nashville, TN",
-            "replyRate" : 95,
-            "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, culputate eu pharetra nec, mattis ac neque.",
-            "tags" : [
-                "UI",
-                "UX",
-                "ReactJS",
-                "javascript",
-                "Firebase"
-            ],
-            "wage" : 35.00
-        }
-    ]
-  }
+  "savedJobs": [
+    {
+      "key": "test-1234567890",
+      "id": 2
+    },
+    {
+      "key": "d75eab22-7470-11e8-9b42-fa575f4189de",
+      "id": 3
+    },
+    {
+      "key": "5f4ac9aa-749c-11e8-9cf9-5cf142fd2ec1",
+      "id": 4
+    },
+    {
+      "key": "c07d518c-7421-11e8-8adc-0a966da77d94",
+      "id": 5
+    },
+    {
+      "key": "5f4ac9aa-749c-11e8-9cf9-5cf142fd2ec1",
+      "id": 6
+    },
+    {
+      "key": "5f4ac9aa-749c-11e8-9cf9-5cf142fd2ec1",
+      "id": 7
+    }
+  ]
+}
