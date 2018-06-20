@@ -2,46 +2,38 @@ import React from 'react';
 import 'antd/dist/antd.css';
 import { Badge, Icon } from 'antd';
 import './SingleResult.css';
+import { postFave, deleteFave } from '../../../json-interactions/json-calls';
 
 export default class SingleResult extends React.Component {
     state = {
         selected: false,
-    }
-
+        type: "star-o",
+        id: undefined
+    };
 
     SaveFave = () => {
-            //onClick, if star is selected (True)
+
+        let jobKey = this.props.jobKey;
+
         if (this.state.selected) {
-        //then favorite job by
-            console.log('unfavoriting the job');
-            // setState of icon to star
+            console.log('unfavoriting job id', jobKey);
             this.setState({
-                selected: false
-            })
-            // job is added to db.json;'/.
+                selected: false,
+                type: "star-o"
+            });
+            deleteFave(this.state.id);
         } else {
-        //else run favorite job function
-            console.log('favoriting the job');
-            // setState of Icon to star-o
+            console.log('favoriting job', jobKey);
             this.setState({
-                selected: true
-            })
-            // Job is deleted from db.json
-        }
-    }
-
-
-    starStuff = () => {
-        if(this.state.selected){
-            return(
-                <Icon type="star" />
-            )
-        }else{
-            return(
-                <Icon type="star-o" />
-            )
-        }
-    }
+                selected: true,
+                type: "star"
+            });
+            postFave(jobKey)
+            .then((id) => {
+                this.setState({id});
+            });
+    };
+};
 
     render() {
 
@@ -53,11 +45,13 @@ export default class SingleResult extends React.Component {
 
         });
 
+
+
         return (
             <div key={this.props.jobKey} className="jobResult">
                 <hr />
-                <div className="jobTitle">
-                    <a onClick={this.SaveFave}>{this.starStuff()}</a>
+                <div id={this.state.id} className="jobTitle">
+                    <a onClick={this.SaveFave}><Icon type={this.state.type} /></a>
                     <p className="title">{this.props.title}</p>
                     <Badge className="badge-availability" count={this.props.availability} />
                     <p className="payRate">{this.props.payRate}</p>
