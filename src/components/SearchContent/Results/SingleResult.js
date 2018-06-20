@@ -2,14 +2,40 @@ import React from 'react';
 import 'antd/dist/antd.css';
 import { Badge, Icon } from 'antd';
 import './SingleResult.css';
-import { postFave, deleteFave } from '../../../json-interactions/json-calls';
+import { getFaves, postFave, deleteFave } from '../../../json-interactions/json-calls';
 
 export default class SingleResult extends React.Component {
-    state = {
-        selected: false,
-        type: "star-o",
-        id: undefined
-    };
+    
+    constructor(props) {
+        super(props);
+        this.state = {
+            selected: false,
+            type: "star-o",
+            id: undefined
+        };
+        this.LoadFaves();
+    }
+
+    LoadFaves = () => {
+        getFaves()
+        .then ((favesList) => {
+            console.log('these are the faves', favesList);
+            favesList.forEach(fave => {
+                for(let key in fave) {
+                    // console.log('fave.key', fave.key);
+                    // console.log('key prop is', key);
+                    if ( fave.key === this.props.jobKey) {
+                        console.log('fave.id is', fave.id);
+                        this.setState({
+                            id : fave.id,
+                            type: "star",
+                            selected: true
+                        })
+                    }
+                }
+            });
+        })
+    }
 
     SaveFave = () => {
 

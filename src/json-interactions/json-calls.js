@@ -6,7 +6,8 @@ const jsonPath = "http://localhost:" + port + "/savedJobs";
 let getFaves = () => {
     return axios.get(jsonPath)
     .then ((data) => {
-        console.log('the faved jobs are:', data.data);
+        // console.log('the faved jobs are:', data.data);
+        return data.data;
     })
     .catch ((error) => {
         console.log('there was an error fetching the saved jobs:', error);
