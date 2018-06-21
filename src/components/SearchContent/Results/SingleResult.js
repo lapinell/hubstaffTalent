@@ -76,10 +76,12 @@ export default class SingleResult extends React.Component {
         return (
             <div key={this.props.jobKey} className="jobResult">
                 <hr />
-                <div id={this.state.id} className="jobTitle">
-                    <a onClick={this.SaveFave}><Icon type={this.state.type} /></a>
-                    <p className="title">{this.props.title}</p>
-                    <Badge className="badge-availability" count={this.props.availability} />
+                <div id={this.state.id} className="jobHeader">
+                    <div class="jobTitle">
+                        <a class="star" onClick={this.SaveFave}><Icon type={this.state.type} /></a>
+                        <p className="title">{this.props.title}</p>
+                        <Badge className="badge-availability" count={this.props.availability} />
+                    </div>
                     <p className="payRate">{this.props.payRate}</p>
                 </div>
                 <div className="jobCompany">
