@@ -1,5 +1,14 @@
+.jobHeader {
+    display: flex;
+    justify-content: space-between;
+}
+
 .jobTitle, .jobCompany {
     display: flex;
+}
+
+.star {
+    margin-right: 10px;
 }
 
 .title, .badge-skill, .company {

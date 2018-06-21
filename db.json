@@ -1,27 +1,23 @@
 {
   "savedJobs": [
     {
-      "key": "test-1234567890",
+      "key": "6d346aa4-68f7-11e8-9ff1-ab391db31ea1",
+      "id": 1
+    },
+    {
+      "key": "12cc51c4-699e-11e8-8802-07f453fccfcd",
       "id": 2
     },
     {
-      "key": "d75eab22-7470-11e8-9b42-fa575f4189de",
-      "id": 3
-    },
-    {
-      "key": "5f4ac9aa-749c-11e8-9cf9-5cf142fd2ec1",
+      "key": "da6791be-6da2-11e8-9ca1-fe3ae1245654",
       "id": 4
-    },
-    {
-      "key": "c07d518c-7421-11e8-8adc-0a966da77d94",
-      "id": 5
     },
     {
       "key": "5f4ac9aa-749c-11e8-9cf9-5cf142fd2ec1",
       "id": 6
     },
     {
-      "key": "5f4ac9aa-749c-11e8-9cf9-5cf142fd2ec1",
+      "key": "c07d518c-7421-11e8-8adc-0a966da77d94",
       "id": 7
     }
   ]
