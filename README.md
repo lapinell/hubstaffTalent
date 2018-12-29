@@ -2,7 +2,7 @@
 
 ## About
 
-This project started in June, 2018 as a hiring assessment turned final project for my front end design and development bootcamp. You can find more information about the history of this project [here](./history.md). 
+This project started in June, 2018 as a hiring assessment turned final project for my front end design and development bootcamp. You can find more information about the history of this project [here](./History.md). 
 
 Currently, this is a personal project to exercise my skills in UI development, API integration, and headless WordPress development. Please make sure to read the License and Terms of Service Agreement before forking and utilizing it yourself. I'll note here (and there) that some of the APIs used in this project can only be used in a personal manner and cannot be commercialized.
 
