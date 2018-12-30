@@ -23,7 +23,7 @@ These are the planned features of this application. My user is focused primarily
 **UI**
 * [x] [ReactJS](https://reactjs.org/) as my framework
 * [x] [Material UI](https://material-ui.com/) as my component library
-* [] [SCSS](https://sass-lang.com/) as my css framework and compiler, when needed
+* [x] [SCSS](https://sass-lang.com/) as my css framework and compiler, when needed
 
 **Job Listing APIs**
 * [Indeed.com](http://opensource.indeedeng.io/api-documentation/docs/job-search/)
