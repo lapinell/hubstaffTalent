@@ -21,9 +21,9 @@ These are the planned features of this application. My user is focused primarily
 ## Tools 
 
 **UI**
-* [ReactJS](https://reactjs.org/) as my framework
-* [Material UI](https://material-ui.com/) as my component library
-* [SCSS](https://sass-lang.com/) as my css framework and compiler, when needed
+* [x] [ReactJS](https://reactjs.org/) as my framework
+* [x] [Material UI](https://material-ui.com/) as my component library
+* [] [SCSS](https://sass-lang.com/) as my css framework and compiler, when needed
 
 **Job Listing APIs**
 * [Indeed.com](http://opensource.indeedeng.io/api-documentation/docs/job-search/)
@@ -33,6 +33,12 @@ These are the planned features of this application. My user is focused primarily
 
 **Site Database**
 * [WordPress REST API](https://developer.wordpress.org/rest-api/)
+
+**Other**
+* [JestJS](https://jestjs.io)
+* [FlowJS](https://flow.org/)
+* [ChaiJS](https://www.chaijs.com/)
+
 
 ## Instalation Instructions
 **Please read the terms of service before forking and utilizing this application**
